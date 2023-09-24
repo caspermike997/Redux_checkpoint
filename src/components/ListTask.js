@@ -12,10 +12,10 @@ const ListTask = ({ tasks, filter, setFilter }) => {
 
     return (
         <div>
-        <div className='btn'>
-            <button onClick={() => handleFilterChange('all')}>All</button>
-            <button onClick={() => handleFilterChange('done')}>Done</button>
-            <button onClick={() => handleFilterChange('not-done')}>Not Done</button>
+        <div >
+            <button className='btn' onClick={() => handleFilterChange('all')}>All</button>
+            <button className='btn' onClick={() => handleFilterChange('done')}>Done</button>
+            <button className='btn' onClick={() => handleFilterChange('not-done')}>Not Done</button>
         </div>
         {filteredTasks.map((task) => (
             <Task key={task.id} task={task} />
